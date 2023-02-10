@@ -5,8 +5,8 @@ export default function AnimateCircle() {
         <>
             <motion.div
                 className='bg-accent w-128 h-128 rounded-full'
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, scale: 0.6 }}
+                animate={{ opacity: 1, scale: 0.9 }}
                 transition={{
                     default: {
                         duration: 0.5,
@@ -14,7 +14,7 @@ export default function AnimateCircle() {
                     },
                     scale: {
                         type: 'spring',
-                        damping: 7,
+                        damping: 10,
                         stiffness: 200,
                         restDelta: 0.001
                     }

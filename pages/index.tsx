@@ -10,7 +10,7 @@ export default function Home() {
     setIsLoading(true);;
     setTimeout(() => {
       setIsLoading(false);
-    }, 50000);
+    }, 5000);
   }, []);
 
   return (
