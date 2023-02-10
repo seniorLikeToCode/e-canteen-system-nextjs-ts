@@ -10,7 +10,7 @@ export default function Home() {
     setIsLoading(true);;
     setTimeout(() => {
       setIsLoading(false);
-    }, 200000);
+    }, 50000);
   }, []);
 
   return (
@@ -32,7 +32,7 @@ export default function Home() {
           </div>
           :
           <main className="h-screen flex items-center justify-center">
-            <PropagateLoader color='#FF9501' size='25' />
+            <PropagateLoader color='#222' size='25' />
             </main>
 
       }

@@ -27,7 +27,7 @@ export default function Loading() {
                 <h1 className='text-accent font-medium font-poppins text-7xl mr-16'>Ajay</h1>
                 <h1 className='text-accent font-medium font-poppins text-7xl ml-16'>Café</h1>
             </motion.div>
-            <div className='fixed -bottom-60 -left-64'>
+            <div className='fixed -bottom-72 -left-64'>
                 <AnimateCircle />
             </div>
         </>
