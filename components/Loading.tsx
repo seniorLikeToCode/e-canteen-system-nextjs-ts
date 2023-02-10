@@ -5,7 +5,7 @@ import AnimateCircle from './AnimateCircle'
 export default function Loading() {
     return (
         <>
-            <div className='fixed -top-64 left-64'>
+            <div className='fixed -top-72 -right-96'>
                 <AnimateCircle />
             </div>
             <motion.div
@@ -27,7 +27,7 @@ export default function Loading() {
                 <h1 className='text-accent font-medium font-poppins text-7xl mr-16'>Ajay</h1>
                 <h1 className='text-accent font-medium font-poppins text-7xl ml-16'>Café</h1>
             </motion.div>
-            <div className='fixed -bottom-56 -left-60'>
+            <div className='fixed -bottom-60 -left-64'>
                 <AnimateCircle />
             </div>
         </>
