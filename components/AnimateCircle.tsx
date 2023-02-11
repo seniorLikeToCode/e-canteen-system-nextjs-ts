@@ -4,9 +4,9 @@ export default function AnimateCircle() {
     return (
         <>
             <motion.div
-                className='bg-accent w-128 h-128 rounded-full'
-                initial={{ opacity: 0, scale: 0.6 }}
-                animate={{ opacity: 1, scale: 0.9 }}
+                className='bg-white w-128 h-128 rounded-full'
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1.1 }}
                 transition={{
                     default: {
                         duration: 0.5,

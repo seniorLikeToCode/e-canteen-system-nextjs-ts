@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { useState, useEffect } from 'react';
 import PropagateLoader from "react-spinners/PropagateLoader";
 import Loading from 'components/Loading';
+import Welcome from 'components/Welcome';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
@@ -10,7 +11,7 @@ export default function Home() {
     setIsLoading(true);;
     setTimeout(() => {
       setIsLoading(false);
-    }, 5000);
+    }, 500);
   }, []);
 
   return (
@@ -31,8 +32,8 @@ export default function Home() {
             <Loading />
           </div>
           :
-          <main className="h-screen flex items-center justify-center">
-            <PropagateLoader color='#222' size='25' />
+          <main >
+            <Welcome />
             </main>
 
       }
