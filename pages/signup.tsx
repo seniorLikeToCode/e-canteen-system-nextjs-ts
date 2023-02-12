@@ -167,3 +167,5 @@ export default function Signup() {
     );
 
 }
+
+// hiAtSymbol, hiFingerPrint, hiOutlineUser
