@@ -3,9 +3,9 @@ import { ILogin,IRegister } from "@/types";
 export function loginValidate(values : ILogin) {
     const errors: {message: string;} = {message: ''};
 
-    if (!values.email) {
+    if (!values.username) {
         errors.message = 'Email Required';
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.username)) {
         errors.message = 'Invalid email address';
     }
 

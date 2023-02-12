@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Router from 'next/router';
 import { motion } from 'framer-motion';
 
-import { HiAtSymbol, HiFingerPrint, HiOutlineUser } from 'react-icons/hi';
+import { HiAtSymbol, HiFingerPrint, HiOutlineUser, HiPhone } from 'react-icons/hi';
 import { useState, useEffect } from 'react';
 
 import { register } from '../http'
@@ -39,16 +39,16 @@ export default function Signup() {
 
 
         if (message) {
-            console.log('signin validation', message);
+            console.log('Register Validation: ', message);
             setErrorMsg(message);
             return;
         }
-        // isLoading(true);
         console.log(body);
         const res = await register(body);
         console.log(res);
         if (res.status === 201) {
             window.localStorage.setItem('token', res.data.token);
+            Router.replace('/home');
         } else {
             setErrorMsg("User Already Exists");
         }
@@ -73,7 +73,7 @@ export default function Signup() {
             <div className='h-screen bg-primary overflow-hidden' >
 
                 <motion.div
-                    className='flex flex-col items-center justify-center h-2/5'
+                    className='flex flex-col items-center justify-center h-1/3'
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{
@@ -127,9 +127,24 @@ export default function Signup() {
                                 <HiAtSymbol size={25} />
                             </span>
                         </div>
+
                         <div className={`${styles.input_group}`}>
                             <input
-                                type="text"
+                                type="number"
+                                name='contact'
+                                placeholder='Contact'
+                                className={styles.input_text}
+                                onChange={(e) => setData(e)}
+                            />
+                            <span className='icon flex items-center px-4'>
+                                <HiPhone size={25} />
+                            </span>
+                        </div>
+
+
+                        <div className={`${styles.input_group}`}>
+                            <input
+                                type="password"
                                 name='password'
                                 placeholder='Password'
                                 className={styles.input_text}
@@ -141,7 +156,7 @@ export default function Signup() {
                         </div>
                         <div className={`${styles.input_group}`}>
                             <input
-                                type="text"
+                                type="password"
                                 name='confirmPassword'
                                 placeholder='Confirm Password'
                                 className={styles.input_text}
@@ -151,11 +166,9 @@ export default function Signup() {
                                 <HiFingerPrint size={25} />
                             </span>
                         </div>
-                        <div className="input-button">
-                            <button type='submit' className={styles.button}>
-                                Sign Up
-                            </button>
-                        </div>
+                        <button type='submit' className={styles.button}>
+                            Sign Up
+                        </button>
                         <p className='text-center text-gray-400 '>
                             Have an account? <Link href={'/login'} className='text-blue-700'>log in</Link>
                         </p>

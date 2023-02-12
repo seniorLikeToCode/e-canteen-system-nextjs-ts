@@ -29,9 +29,12 @@ export default function Register() {
     const handleSubmit = async (e: any) => {
         e.preventDefault();
         const body: ILogin = {
-            email: e.currentTarget.email.value,
+            username: e.currentTarget.username.value,
             password: e.currentTarget.password.value,
         };
+
+
+        console.log(body);
 
         const { message } = loginValidate(body);
 
@@ -41,12 +44,11 @@ export default function Register() {
             setErrorMsg(message);
             return;
         }
-        // isLoading(true);
-        console.log(body);
         const res = await login(body);
         console.log(res);
-        if (res.status === 201) {
+        if (res.status === 200) {
             window.localStorage.setItem('token', res.data.token);
+            Router.replace('/home');
         } else {
             setErrorMsg("User Already Exists");
         }
@@ -98,11 +100,11 @@ export default function Register() {
                         }
                     }}
                 >
-                    <form className='flex flex-col gap-3 p-8' >
+                    <form className='flex flex-col gap-3 p-8' onSubmit={handleSubmit} >
                         <div className={`${styles.input_group}`}>
                             <input
                                 type="email"
-                                name='email'
+                                name='username'
                                 placeholder='Email'
                                 className={styles.input_text}
                                 onChange={(e) => setData(e)}
@@ -124,11 +126,9 @@ export default function Register() {
                             </span>
                         </div>
 
-                        <div className="input-button">
-                            <button type='submit' className={styles.button}>
+                        <button type='submit' className={styles.button}>
                                 Log in
-                            </button>
-                        </div>
+                        </button>
                         <p className='text-center text-gray-400 '>
                             Do not have an account? <Link href={'/signup'} className='text-blue-700'>Sign up</Link>
                         </p>

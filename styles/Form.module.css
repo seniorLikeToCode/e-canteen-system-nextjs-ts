@@ -9,7 +9,7 @@
 }
 
 .button{
-    @apply w-full bg-black mt-4 rounded-xl;
+    @apply w-full bg-black mt-5 rounded-xl;
     @apply py-3 text-gray-50 text-lg
 }
 
