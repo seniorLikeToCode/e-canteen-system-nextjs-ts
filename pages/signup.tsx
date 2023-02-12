@@ -73,7 +73,7 @@ export default function Signup() {
             <div className='h-screen bg-primary overflow-hidden' >
 
                 <motion.div
-                    className='flex flex-col items-center justify-center h-96'
+                    className='flex flex-col items-center justify-center h-2/5'
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{
