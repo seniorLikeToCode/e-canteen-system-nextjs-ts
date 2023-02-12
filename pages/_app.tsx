@@ -6,11 +6,11 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/icon.png"></link>
         <meta name="theme-color" content="#FF9501" />
-      </Head>
+      </Head> */}
       <div className='h-screen'>
         <Component {...pageProps} />
       </div>

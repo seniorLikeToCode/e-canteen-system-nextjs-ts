@@ -115,7 +115,7 @@ export default function Register() {
                         </div>
                         <div className={`${styles.input_group}`}>
                             <input
-                                type="text"
+                                type="password"
                                 name='password'
                                 placeholder='Password'
                                 className={styles.input_text}
