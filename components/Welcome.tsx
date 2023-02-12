@@ -35,14 +35,18 @@ export default function Welcome() {
                     }
                 }}
             >
-                <div className='h-2/4 flex flex-col justify-center items-center mx-12'>
+                <div className='h-2/4 flex flex-col justify-center items-center mx-12 gap-y-4'>
                     <div className='flex flex-col gap-y-1'>
                         <h1 className='text-black text-5xl font-bold '>Welcome</h1>
                         <span className='text-black text-lg leading-5'>Welcome to the only theek thak canteen of akg</span>
                     </div>
-                    <div className='flex gap-x-4 mt-12'>
-                        <Link href='/login' className='bg-black text-white text-xl rounded-xl px-10 py-4'>Login</Link>
-                        <Link href='/signup' className='bg-white text-black text-xl rounded-xl px-7 py-4'>Sign up</Link>
+                    <div className='flex gap-x-6 items-center  mt-12'>
+                        <div>
+                            <Link href='/login' className='bg-black text-white text-xl rounded-xl px-10 py-4'>Login</Link>
+                        </div>
+                        <div>
+                            <Link href='/signup' className='bg-white text-black text-xl rounded-xl px-7 py-4'>Sign up</Link>
+                        </div>
                     </div>
                 </div>
             </motion.div>

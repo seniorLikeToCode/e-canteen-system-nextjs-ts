@@ -6,11 +6,9 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      {/* <Head>
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="apple-touch-icon" href="/icon.png"></link>
-        <meta name="theme-color" content="#FF9501" />
-      </Head> */}
+      <Head>
+        <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover' />
+      </Head>
       <div className='h-screen'>
         <Component {...pageProps} />
       </div>
