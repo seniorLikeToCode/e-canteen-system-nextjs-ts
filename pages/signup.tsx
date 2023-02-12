@@ -21,7 +21,7 @@ export default function Signup() {
     const [loading, isLoading] = useState<boolean>(false);
 
     useEffect(() => {
-        // if (window.localStorage.getItem('token')) Router.replace('/'); // should be comment out in production
+        // if (window.localStorage.getItem('token')) Router.replace('/home'); // should be comment out in production
     }, [user])
 
 
