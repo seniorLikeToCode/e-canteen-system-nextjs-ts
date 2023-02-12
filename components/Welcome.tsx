@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion'
-import CanteenLogo from './CanteenLogo';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function Welcome() {
     return (
@@ -11,7 +11,7 @@ export default function Welcome() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
                     duration: 0.5,
-                    delay: 0.6,
+                    delay: 0.3,
                     ease: [0, 0.71, 0.2, 1.01]
                 }}
             >
@@ -20,7 +20,7 @@ export default function Welcome() {
             </motion.div>
 
             <motion.div
-                className='w-screen h-screen rounded-t-3xl bg-primary '
+                className='w-screen h-screen rounded-t-large bg-primary '
                 initial={{ y: '100vh' }}
                 animate={{ y: 0 }}
                 transition={{
@@ -38,11 +38,11 @@ export default function Welcome() {
                 <div className='h-2/4 flex flex-col justify-center items-center mx-12'>
                     <div className='flex flex-col gap-y-1'>
                         <h1 className='text-black text-5xl font-bold '>Welcome</h1>
-                        <span className='text-black text-lg leading-5'>Hello Welcome to the only theek thak canteen of akg</span>
+                        <span className='text-black text-lg leading-5'>Welcome to the only theek thak canteen of akg</span>
                     </div>
                     <div className='flex gap-x-4 mt-12'>
-                        <button className='bg-black text-white text-xl rounded-3xl px-10 py-4'>Login</button>
-                        <button className='bg-white text-black text-xl rounded-3xl px-7 py-4'>Sign up</button>
+                        <Link href='/login' className='bg-black text-white text-xl rounded-xl px-10 py-4'>Login</Link>
+                        <Link href='/signup' className='bg-white text-black text-xl rounded-xl px-7 py-4'>Sign up</Link>
                     </div>
                 </div>
             </motion.div>
