@@ -22,8 +22,8 @@ export default function Register() {
     const [loading, isLoading] = useState<boolean>(false as boolean);
 
     useEffect(() => {
-        // if (window.localStorage.getItem('token')) Router.replace('/home'); // should be comment out in production
-    }, [user])
+        if (window.localStorage.getItem('token')) Router.replace('/home'); // should be comment out in production
+    }, [])
 
 
     const handleSubmit = async (e: any) => {
@@ -44,10 +44,17 @@ export default function Register() {
             setErrorMsg(message);
             return;
         }
+        let a: number = Date.now();
         const res = await login(body);
+
+
+
+        let b: number = Date.now();
+        console.log(b - a);
         console.log(res);
         if (res.status === 200) {
             window.localStorage.setItem('token', res.data.token);
+            console.log(window.localStorage.getItem('token'));  
             Router.replace('/home');
         } else {
             setErrorMsg("User Already Exists");
@@ -127,7 +134,7 @@ export default function Register() {
                         </div>
 
                         <button type='submit' className={styles.button}>
-                                Log in
+                            Log in
                         </button>
                         <p className='text-center text-gray-400 '>
                             Do not have an account? <Link href={'/signup'} className='text-blue-700'>Sign up</Link>

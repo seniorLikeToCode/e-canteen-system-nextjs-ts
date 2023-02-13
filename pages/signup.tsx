@@ -21,8 +21,8 @@ export default function Signup() {
     const [loading, isLoading] = useState<boolean>(false);
 
     useEffect(() => {
-        // if (window.localStorage.getItem('token')) Router.replace('/home'); // should be comment out in production
-    }, [user])
+        if (window.localStorage.getItem('token')) Router.replace('/home'); // should be comment out in production
+    }, [])
 
 
     const handleSubmit = async (e: any) => {
@@ -45,9 +45,11 @@ export default function Signup() {
         }
         console.log(body);
         const res = await register(body);
+
         console.log(res);
         if (res.status === 201) {
             window.localStorage.setItem('token', res.data.token);
+            console.log(window.localStorage.getItem('token'));  
             Router.replace('/home');
         } else {
             setErrorMsg("User Already Exists");
