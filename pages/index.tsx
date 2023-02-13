@@ -12,7 +12,7 @@ export default function Index() {
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
-      // if (window.localStorage.getItem('token')) Router.replace('/home'); // should be comment out in production
+      if (window.localStorage.getItem('token')) Router.replace('/home'); // should be comment out in production
     }, 1500);  // this is should be 1500 but at time of code writing it is 500 
   }, []);
 
