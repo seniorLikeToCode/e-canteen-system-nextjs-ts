@@ -19,6 +19,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lib/validate.ts", "pages/login.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lib/validate.ts", "pages/login.tsx", "pages/_document.jsx"],
   "exclude": ["node_modules"]
 }
