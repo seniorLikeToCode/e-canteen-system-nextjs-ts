@@ -19,8 +19,6 @@ export default function Signup() {
     const [errorMsg, setErrorMsg] = useState<string>("");
     const [loading, isLoading] = useState<boolean>(false);
 
-    const [s, setS] = useState();
-
     useEffect(() => {
         if (window.localStorage.getItem('token')) Router.replace('/home'); // should be comment out in production
     }, [])
@@ -74,7 +72,6 @@ export default function Signup() {
                 <title>Sign Up</title>
             </Head>
             <div className='h-screen bg-primary overflow-hidden' >
-
                 <motion.div
                     className='flex flex-col items-center justify-center h-1/3'
                     initial={{ opacity: 0, scale: 0.5 }}
