@@ -42,10 +42,10 @@ export default function Welcome() {
                     </div>
                     <div className='flex gap-x-6 items-center  mt-12'>
                         <div>
-                            <Link href='/login' className='bg-black text-white text-xl rounded-xl px-10 py-4'>Login</Link>
+                            <Link href='/login' className='bg-black text-white text-xl rounded-xl px-10 py-4 drop-shadow-lg'>Login</Link>
                         </div>
                         <div>
-                            <Link href='/signup' className='bg-white text-black text-xl rounded-xl px-7 py-4'>Sign up</Link>
+                            <Link href='/signup' className='bg-white text-black text-xl rounded-xl px-7 py-4 drop-shadow-lg'>Sign up</Link>
                         </div>
                     </div>
                 </div>

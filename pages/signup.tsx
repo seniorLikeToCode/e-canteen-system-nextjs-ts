@@ -15,10 +15,11 @@ import { IRegister } from '@/types';
 
 
 export default function Signup() {
-    // const win: any = localStorage;
     const [user, setUser] = useState<IRegister>({} as IRegister);
     const [errorMsg, setErrorMsg] = useState<string>("");
     const [loading, isLoading] = useState<boolean>(false);
+
+    const [s, setS] = useState();
 
     useEffect(() => {
         if (window.localStorage.getItem('token')) Router.replace('/home'); // should be comment out in production
@@ -168,9 +169,11 @@ export default function Signup() {
                                 <HiFingerPrint size={25} />
                             </span>
                         </div>
+                        {/* <div className='sh-btn'> */}
                         <button type='submit' className={styles.button}>
                             Sign Up
                         </button>
+                        {/* </div> */}
                         <p className='text-center text-gray-400 '>
                             Have an account? <Link href={'/login'} className='text-blue-700'>log in</Link>
                         </p>

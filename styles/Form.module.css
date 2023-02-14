@@ -1,25 +1,25 @@
 .input_group{
-    @apply flex border rounded-xl bg-neutral-100;
+    @apply flex border rounded-xl bg-neutral-100 drop-shadow;
     position: relative;
 }
 
 .input_text{
     @apply w-full py-4 px-6 border rounded-xl bg-neutral-100;
-    @apply focus:outline-none border-none
+    @apply focus:outline-none border-none ;
 }
 
 .button{
-    @apply w-full bg-black mt-5 rounded-xl;
-    @apply py-3 text-gray-50 text-lg
+    @apply w-full bg-black mt-5 rounded-xl py-3 text-gray-50 text-lg shadow-2xl;
+    /* box-shadow: 0px 5px 19px rgba(0, 0, 0, 0.15) !important; */
 }
 
 .button:hover{
     @apply bg-primary text-white border-none;
-    @apply text-white border;
+    @apply text-white border ;
 }
 
 .button_custom{
- @apply w-full border py-3 flex justify-center gap-2 hover:bg-gray-200;
+ @apply w-full border py-3 flex justify-center gap-2 hover:bg-gray-200 ;
 }
 
 .input_text + *{
@@ -27,10 +27,11 @@
 }
 
 .input_text:focus + *{
-    color:#FF9501;
+    @apply text-primary;
 }
 
 .input_text:not([]) ~ span:hover *{
-    color: #FF9501;
+    @apply text-primary;
     cursor: pointer;
 }
+

@@ -11,8 +11,8 @@ export default function Index() {
   useEffect(() => {
     setIsLoading(true);
     setTimeout(() => {
-      setIsLoading(false);
       if (window.localStorage.getItem('token')) Router.replace('/home'); // should be comment out in production
+      setIsLoading(false);
     }, 1500);  // this is should be 1500 but at time of code writing it is 500 
   }, []);
 
