@@ -6,7 +6,7 @@ import Image from 'next/image';
 export default function Menu() {
     return (
         <>
-            <div className="flex gap-x-3 gap-y-1 mt-4">
+            <div className="flex gap-x-3 gap-y-1 my-4">
                 <motion.div
                     whileTap={{ scale: 0.8 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
