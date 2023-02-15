@@ -10,7 +10,7 @@ export default function Menu() {
                 <motion.div
                     whileTap={{ scale: 0.8 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                    className="inline-flex items-center  py-2 px-4 bg-slate-50 rounded-xl  gap-x-1" >
+                    className="inline-flex items-center drop-shadow py-2 px-4 bg-slate-50 rounded-xl  gap-x-1" >
 
                     <Image className="w-8" src={SnacksLogo} alt='hamburger' />
                     <span className="text-lg">Snacks</span>
@@ -18,7 +18,7 @@ export default function Menu() {
                 <motion.div
                     whileTap={{ scale: 0.8 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                    className="inline-flex items-center py-2 px-4 bg-slate-50 rounded-xl  gap-x-1">
+                    className="inline-flex items-center drop-shadow py-2 px-4 bg-slate-50 rounded-xl  gap-x-1">
 
 
                     <Image className="w-8" src={MealLogo} alt='mealLogo' />
@@ -27,7 +27,7 @@ export default function Menu() {
                 <motion.div
                     whileTap={{ scale: 0.8 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                    className="inline-flex items-center py-2 px-4 bg-slate-50 rounded-xl ">
+                    className="inline-flex items-center drop-shadow py-2 px-4 bg-slate-50 rounded-xl ">
 
                     <Image className="w-8" src={DrinksLogo} alt='DrinkLogo' />
                     <span className="text-lg">Drinks</span>

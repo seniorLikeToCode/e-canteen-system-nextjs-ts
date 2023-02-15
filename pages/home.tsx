@@ -10,6 +10,7 @@ export default function Home() {
                 <h1 className="text-2xl mt-3 font-semibold text-black">Available Today </h1>
                 < Menu />
             </div>
+            <FoodCard />
         </div>
     );
 }
