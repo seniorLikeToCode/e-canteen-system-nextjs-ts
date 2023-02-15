@@ -6,7 +6,7 @@ export default function FoodCard() {
     return (
         <>
             <div className="scroll">
-                <div className='grid grid-cols-2 grid-flow-row gap-x-4 gap-y-4 mt-4 rm-scrollbar'>
+                <div className='grid grid-cols-2  gap-x-4 gap-y-4 mt-4 rm-scrollbar'>
                     <div className='bg-neutral-50 drop-shadow rounded-lg p-2'>
                         <div className='flex justify-between'>
                             <HiHeart size={25} className='text-neutral-300' />
