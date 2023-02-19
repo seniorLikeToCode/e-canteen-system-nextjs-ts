@@ -8,7 +8,7 @@ export default function FoodCard({ category, products }: { category: string; pro
     return (
         <>
             <div className="scroll">
-                <div className='grid grid-cols-2  gap-x-4 gap-y-4 mt-4 rm-scrollbar drop-shadow mx-1'>
+                <div className='grid grid-cols-2 gap-x-4 gap-y-4 mt-4 rm-scrollbar drop-shadow mx-1'>
                     {
                         products.data.map((product: IProductData) => {
                             if (product.category === category)
@@ -31,6 +31,7 @@ export default function FoodCard({ category, products }: { category: string; pro
                         })
                     }
                 </div>
+                <div className='h-48'></div>
             </div>
         </>
     );
