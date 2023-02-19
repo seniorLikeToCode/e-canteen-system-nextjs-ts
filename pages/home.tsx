@@ -2,18 +2,47 @@ import FoodCard from "@/components/FoodCard";
 import Menu from "@/components/Menu";
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer';
+import { IProducts } from "@/types";
+import { useEffect, useState } from 'react'
+import { allProduct } from '../http';
+import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 
-export default function Home() {
+const checkApi = async () => {
+    const res = await allProduct();
+    const products = res.data;
+    console.log(products);
+}
+
+
+
+
+export default function Home({ products }: InferGetStaticPropsType<typeof getStaticProps>) {
+    const [category, setCategory] = useState('meal');
+    useEffect(() => {
+        console.log(category);
+    }, [category])
+
     return (
         <div className="">
             <Nav />
             <div className="m-4 rm-scrollbar">
                 <h1 className="text-2xl mt-3 font-semibold text-black">Available Today </h1>
-                < Menu />
-                <FoodCard />
+                <Menu setCategory={setCategory} />
+                <FoodCard category={category} products={products} />
             </div>
             <Footer />
         </div>
     );
 }
 
+export const getStaticProps: GetStaticProps<{ products: IProducts }> = async () => {
+    const res: any = await allProduct();
+    const products: IProducts = res.data;
+    console.log(res);
+
+    return {
+        props: {
+            products,
+        },
+    }
+}

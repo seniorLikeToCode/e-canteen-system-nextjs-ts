@@ -5,15 +5,19 @@ import PropagateLoader from "react-spinners/PropagateLoader";
 import Loading from 'components/Loading';
 import Welcome from 'components/Welcome';
 import Router from 'next/router';
+import { setToken } from '@/lib/setUser';
 
 export default function Index() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    setIsLoading(true);
+    // setIsLoading(true);
     setTimeout(() => {
-      if (window.localStorage.getItem('token')) Router.replace('/home'); // should be comment out in production
+      if (window.localStorage.getItem('token')) {
+        setToken(window.localStorage.getItem('token'));
+        Router.replace('/home');
+      } 
       setIsLoading(false);
-    }, 1500);  // this is should be 1500 but at time of code writing it is 500 
+    }, 1500); 
   }, []);
 
   return (

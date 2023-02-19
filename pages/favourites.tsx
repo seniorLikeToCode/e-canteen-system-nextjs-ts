@@ -12,7 +12,7 @@ export default function Favourite() {
             </h2>
             {/* main */}
             <div className="m-4">
-                <FoodCard />
+                {/* <FoodCard category={ } products={ } /> */}
             </div>
             <Footer />
         </div>

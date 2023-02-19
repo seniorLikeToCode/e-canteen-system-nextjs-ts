@@ -13,7 +13,7 @@ export default function Footer() {
 
     return (
         <>
-            <div className='fixed bottom-0 left-0'>
+            <div className='fixed bottom-0 left-0 bg-white'>
                 <div className="flex justify-around w-screen py-7 ">
                     <ActiveLink href='/home'>
                         <HiRectangleStack size={30} id='explore' className="text-inherit" onClick={MenuSelector} />
