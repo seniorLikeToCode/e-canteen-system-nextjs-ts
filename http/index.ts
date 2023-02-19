@@ -28,3 +28,12 @@ export const allProduct = async () => api.get('/api/v1/product');
 //  Cart Routes
 export const cartItem = async () => api.get('/api/v1/cart');
 // export const addItem = async (productId: string) => api.get({`/api/v1/cart/add/${productId}`});
+
+
+/*
+export const fetchArticles = async (queryString: string) =>
+    api.get(`/api/articles?${queryString}`);
+
+export const fetchArticleBySlug = async (queryString: string) =>
+    api.get(`/api/articles?${queryString}`);
+*/

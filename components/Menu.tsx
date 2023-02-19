@@ -3,7 +3,7 @@ import SnacksLogo from './asset/hamburger.png';
 import DrinksLogo from './asset/kawaii-coffee.png'
 import MealLogo from './asset/paella.png'
 import Image from 'next/image';
-export default function Menu({ setCategory }) {
+export default function Menu({ setCategory }: { setCategory: any }) {
     return (
         <>
             <div className="flex gap-x-3 gap-y-1 my-4">
