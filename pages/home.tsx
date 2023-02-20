@@ -7,14 +7,6 @@ import { useEffect, useState } from 'react'
 import { allProduct } from '../http';
 import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 
-const checkApi = async () => {
-    const res = await allProduct();
-    const products = res.data;
-    console.log(products);
-}
-
-
-
 
 export default function Home({ products }: InferGetStaticPropsType<typeof getStaticProps>) {
     const [category, setCategory] = useState('meal');

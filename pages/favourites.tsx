@@ -7,7 +7,8 @@ import Image from 'next/image';
 import { HiHeart, HiPlusCircle } from 'react-icons/hi2'
 
 
-export default function Favourite({ products }: InferGetStaticPropsType<typeof getServerSideProps>) {
+export default function Favourite(products: any) {
+    // console.log(products.products.data);
     return (
         <div className="">
             {/* header */}
@@ -20,7 +21,7 @@ export default function Favourite({ products }: InferGetStaticPropsType<typeof g
                 <div className="scroll">
                     <div className='grid grid-cols-2 gap-x-4 gap-y-4 mt-4 rm-scrollbar drop-shadow mx-1'>
                         {
-                            products.map((product: IProductData) => {
+                            products.products.data.map((product: any) => {
                                 return (
                                     <div key={product._id} className='rounded-lg p-2 shadow-md bg-slate-50'>
                                         <div className='flex justify-between'>
@@ -50,7 +51,7 @@ export default function Favourite({ products }: InferGetStaticPropsType<typeof g
     );
 }
 
-export const getServerSideProps: GetServerSideProps<{ products: IProducts }> = async () => {
+export const getServerSideProps: GetServerSideProps<{ products: any }> = async () => {
     // /api/v1/favourites
     const addItem = {
         method: 'get',
@@ -65,11 +66,12 @@ export const getServerSideProps: GetServerSideProps<{ products: IProducts }> = a
         fav = res.data;
     })
 
-    const products: IProducts = fav.data;
+    const products: any = fav;
+    // console.log(products);
 
     return {
         props: {
             products,
         }
-    }   
+    }
 }
