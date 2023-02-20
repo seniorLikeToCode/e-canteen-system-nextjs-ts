@@ -8,6 +8,10 @@ import { allProduct } from '../http';
 import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 
 
+
+
+
+
 export default function Home({ products }: InferGetStaticPropsType<typeof getStaticProps>) {
     const [category, setCategory] = useState('meal');
     console.log(products);

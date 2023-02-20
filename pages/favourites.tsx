@@ -25,8 +25,8 @@ export default function Favourite(products: any) {
                                 return (
                                     <div key={product._id} className='rounded-lg p-2 shadow-md bg-slate-50'>
                                         <div className='flex justify-between'>
-                                            <HiHeart size={25} className='text-neutral-300' onClick={() => addToFav(product._id)} />
-                                            <HiPlusCircle size={25} className='text-neutral-300' onClick={() => addToCart(product._id)} />
+                                            <HiHeart size={25} className='text-neutral-300' />
+                                            <HiPlusCircle size={25} className='text-neutral-300' />
                                         </div>
                                         <div className='flex flex-col items-center mt-3'>
                                             <div className=' w-32 h-32 rounded-full overflow-hidden bg-slate-200'>
