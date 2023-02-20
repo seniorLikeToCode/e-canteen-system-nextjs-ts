@@ -10,4 +10,17 @@ const withPWA = require('next-pwa')({
 
 module.exports = withPWA({
   // next.js config
+
+  // images: {
+  //   remotePatterns: [
+  //     {
+  //       protocol: 'https',
+  //       hostname: 'imgk.timesnownews.com',
+  //       // port: '',
+  //       // pathname: '/account123/**',
+  //     },
+  //   ],
+  // },
 })
+
+// https://imgk.timesnownews.com/story/iStock-1222525485.jpg

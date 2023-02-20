@@ -18,6 +18,7 @@ const checkApi = async () => {
 
 export default function Home({ products }: InferGetStaticPropsType<typeof getStaticProps>) {
     const [category, setCategory] = useState('meal');
+    console.log(products);
     useEffect(() => {
         console.log(category);
     }, [category])
@@ -38,7 +39,6 @@ export default function Home({ products }: InferGetStaticPropsType<typeof getSta
 export const getStaticProps: GetStaticProps<{ products: IProducts }> = async () => {
     const res: any = await allProduct();
     const products: IProducts = res.data;
-    console.log(res);
 
     return {
         props: {

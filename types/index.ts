@@ -18,6 +18,7 @@ export interface IProductData {
     available: boolean;
     category: string;
     __v: number;
+    imageUrl: string;
 }
 
 export interface IProducts {

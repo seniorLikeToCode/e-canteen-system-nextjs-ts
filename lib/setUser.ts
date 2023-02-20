@@ -1,14 +1,13 @@
-
 type IToken = {
     token: string | null;
 }
 
-let accessToken: IToken;
+export let accessToken: IToken;
 
 export const setToken = (token : string | null) => {
-    const accessToken: IToken = {token}
+    accessToken = { token }
 }
 
-export const getToken = () => {
+const getToken = () => {
     return accessToken;
 }
