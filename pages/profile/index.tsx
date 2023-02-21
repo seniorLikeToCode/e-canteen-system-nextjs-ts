@@ -1,10 +1,12 @@
 import { HiArrowNarrowLeft } from "react-icons/hi";
 import Link from 'next/link';
 import Footer from "@/components/Footer";
+import Router from 'next/router'
 
 export default function Profile() {
     const handleLogout = () => {
         window.localStorage.clear();
+        Router.push('/home');
     }
 
     return (
