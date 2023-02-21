@@ -39,11 +39,11 @@ export default function Cart(products: any) {
                     {
                         products.products.map((product: any) => {
                             return (
-                                <div key={product.product_id._id} className='flex justify-between items-center bg-neutral-100 p-3 rounded-md shadow-md'>
-                                    {/* image */}
+                                <div key={product.product_id._id} className='flex justify-between items-center bg-neutral-100 p-3 rounded-md shadow-md '>
+
                                     <div className='flex items-center gap-x-2'>
-                                        <div className='h-20 w-20 bg-slate-300 rounded-full overflow-hidden'>
-                                            <Image className='mt-3 rounded-full scale-150' loader={() => product.product_id.imageUrl} src={product.product_id.imageUrl} unoptimized={true} width={100} height={100} alt={product.product_id.product_name} />
+                                        <div className='h-20 w-20 bg-slate-300 rounded-full overflow-hidden drop-shadow-md'>
+                                            <Image className='mt-2 rounded-full scale-150 overflow-hidden' loader={() => product.product_id.imageUrl} src={product.product_id.imageUrl} unoptimized={true} width={100} height={100} alt={product.product_id.product_name} />
                                         </div>
                                         <div>
                                             <p className='text-xl'>{product.product_id.product_name} </p>
