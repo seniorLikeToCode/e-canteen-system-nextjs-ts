@@ -8,23 +8,24 @@ import { GetServerSideProps } from 'next';
 import Image from 'next/image';
 
 
-const ItemQaunity = ({ initQ }: { initQ: number }) => {
-    const [quantity, setQuantity] = useState(initQ);
 
-    return (
-        <div className='flex flex-col justify-around items-center'>
-            <HiMinus size={20} className="mb-2" onClick={() => {
-                if (quantity === 0) return;
-                setQuantity(quantity - 1)
-            }} />
-            <p className='text-2xl'>{quantity}</p>
-            <HiPlus size={20} className="mt-2" onClick={() => setQuantity(quantity + 1)} />
-        </div>
-    );
-}
 
 export default function Cart(products: any) {
     // console.log(products);
+    const ItemQaunity = ({ initQ }: { initQ: number }) => {
+        const [quantity, setQuantity] = useState(initQ);
+
+        return (
+            <div className='flex flex-col justify-around items-center'>
+                <HiMinus size={20} className="mb-2" onClick={() => {
+                    if (quantity === 0) return;
+                    setQuantity(quantity - 1)
+                }} />
+                <p className='text-2xl'>{quantity}</p>
+                <HiPlus size={20} className="mt-2" onClick={() => setQuantity(quantity + 1)} />
+            </div>
+        );
+    }
 
     return (
         <>
@@ -38,11 +39,11 @@ export default function Cart(products: any) {
                     {
                         products.products.map((product: any) => {
                             return (
-                                <div key={product.product_id._id} className='flex justify-between items-center bg-neutral-100   p-3 rounded-md shadow-md'>
+                                <div key={product.product_id._id} className='flex justify-between items-center bg-neutral-100 p-3 rounded-md shadow-md'>
                                     {/* image */}
                                     <div className='flex items-center gap-x-2'>
                                         <div className='h-20 w-20 bg-slate-300 rounded-full overflow-hidden'>
-                                            <Image className='mt-3 scale-150' loader={() => product.product_id.imageUrl} src={product.product_id.imageUrl} unoptimized={true} width={100} height={100} alt={product.product_id.product_name} />
+                                            <Image className='mt-3 rounded-full scale-150' loader={() => product.product_id.imageUrl} src={product.product_id.imageUrl} unoptimized={true} width={100} height={100} alt={product.product_id.product_name} />
                                         </div>
                                         <div>
                                             <p className='text-xl'>{product.product_id.product_name} </p>
