@@ -36,3 +36,17 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## Description
+
+
+An online food ordering app designed for a college canteen is a convenient and efficient way for students to order and pay for their meals. With the app, students can place their orders from their phones without having to wait in long lines, reducing crowding in the canteen and minimizing the risk of transmission of communicable diseases.
+
+The app typically features a user-friendly interface that allows students to browse the menu, select their desired items, and place their orders. The menu can be categorized into different sections, such as breakfast, lunch, snacks, and beverages. The app can also have options for special dietary requirements, such as vegetarian, gluten-free, or halal.
+
+One of the main advantages of an online food ordering app is that it provides a smooth payment method. Students can pay for their orders via the app using various payment options such as credit/debit cards, net banking, or mobile wallets. This eliminates the need for cash transactions and saves time for both the students and the canteen staff.
+
+The app can also provide real-time updates on the status of the order, such as when it is being prepared or when it is ready for pickup. This allows students to plan their time accordingly and avoid waiting unnecessarily.
+
+Overall, an online food ordering app for a college canteen is a convenient and efficient solution to the crowding problem and payment hassles. It provides a seamless experience for both the students and the canteen staff, making the whole process smoother and hassle-free.
